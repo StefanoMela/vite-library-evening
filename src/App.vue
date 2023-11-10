@@ -1,21 +1,19 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import { RouterView } from 'vue-router';
+import Navbar from './components/Navbar.vue'
+import HomePage from './pages/HomePage.vue';
+
 
 export default {
-  data() {
-    return {
-      title: "Hello world"
-    }
-  }
-
-  // components: {
-  //   MyComponent,
-  // },
+  components: { Navbar, HomePage },
 };
 </script>
 
 <template>
-  <h1 class="text-danger">{{ title }}</h1>
+  <Navbar />
+  <div class="container">
+      <RouterView />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
